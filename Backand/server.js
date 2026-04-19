@@ -1,8 +1,12 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
+// Agar sirf itna likha hai:
+app.use(cors()); 
 
-app.use(cors()); // Isse frontend aur backend bina kisi error ke connect ho payenge
+// Toh ise badal kar ye kar dijiye (taaki koi bhi frontend ise use kar sake):
+app.use(cors({ origin: '*' }));
+``
 app.use(express.json()); // JSON data read karne ke liye
 
 // Ye hamara temporary database hai (Array of Objects)
