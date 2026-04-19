@@ -40,8 +40,6 @@ app.delete('/api/cards/:id', (req, res) => {
 
 // Ye line kehti hai: "Render ka port use karo, agar wo nahi mile toh 5000 use karo"
 const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, () => console.log(`Server chalu ho gaya port: ${PORT}`));
-const API_URL = 'https://flashcard-lzda.onrender.com/api/cards';
-// Poori file mein jahan bhi localhost hai, use Render wale link se badal dein
-const API_URL = 'https://flashcard-lzda.onrender.com/api/cards';
+app.listen(PORT, () => {
+    console.log(`Server chal raha hai port ${PORT} par`);
+});
