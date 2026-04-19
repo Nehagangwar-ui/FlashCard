@@ -38,3 +38,4 @@ app.delete('/api/cards/:id', (req, res) => {
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log(`Server chalu ho gaya port: ${PORT}`));
+const API_URL = 'https://flashcard-lzda.onrender.com/api/cards';
