@@ -34,5 +34,7 @@ app.delete('/api/cards/:id', (req, res) => {
     res.json({ message: "Card delete ho gaya!" });
 });
 
-const PORT = 5000;
-app.listen(PORT, () => console.log(`Server chalu ho gaya: http://localhost:${PORT}`));
+// Ye line kehti hai: "Render ka port use karo, agar wo nahi mile toh 5000 use karo"
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => console.log(`Server chalu ho gaya port: ${PORT}`));
